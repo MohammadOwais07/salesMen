@@ -41,12 +41,14 @@ app.post('/signUp', function (req, res) {
 
         ref.authWithPassword({
             "email": req.body.email, //clint sy jo bhi value di hoti ha wo yahan aati ha....user email
-            "password": req.body.email  //clint sy jo  bhi  value hoti ha wo yahan aati ha..user pasword
+            "password": req.body.password  //clint sy jo  bhi  value hoti ha wo yahan aati ha..user pasword
         }, function(error, authData) {
             if (error) {
                 console.log("Login Failed!", error);
             } else {
                 console.log("Authenticated successfully with payload:", authData);
+                res.send(authData);
+                res.end();
             }
         });
 

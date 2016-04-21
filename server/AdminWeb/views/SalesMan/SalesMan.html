@@ -1,0 +1,79 @@
+<h1 xmlns="http://www.w3.org/1999/html">our saleMan </h1>
+
+<md-content>
+    <md-list>
+        <!--<md-subheader class="md-no-sticky">3 line item (with hover)</md-subheader>-->
+        <md-list-item class="md-3-line" ng-repeat="salesman in salesmen track by $index"> <!-- index repeate ni hoga -->
+            <!--ng-repeat array ha saleman k ander add krwayga-->
+            <div class="md-list-item-text">
+                <h3>{{($index +1)+") " + " " + salesman.name }}</h3> <!-- index show index no onlt-->
+                <h4>{{ salesman.email }}</h4>
+
+                <p>{{ salesman.address }}</p>
+
+                <p>{{ salesman.number }}</p>
+            </div>
+        </md-list-item>
+        <md-divider ng-if="!last"></md-divider>
+    </md-list>
+    <md-content layout="column" layout-align="center end">
+        <md-button ng-click="openRight()"
+                   class="md-primary">
+            Toggle right
+        </md-button>
+    </md-content>
+    </section>
+
+</md-content>
+
+
+<md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" md-is-locked-open="false">
+    <md-toolbar class="md-theme-light">
+        <h1 class="md-toolbar-tools">Sidenav Right</h1>
+    </md-toolbar>
+    <md-content layout-padding>
+
+        <form>
+            <md-input-container>
+                <label for="testInput">SaleMan Name</label>
+                <input type="text" id="testInput" ng-model="salesman.name"
+                       md-autofocus>
+            </md-input-container>
+        </form>
+
+        <form>
+            <md-input-container>
+                <label for="testInput"> email</label>
+                <input type="text" id="testInput1" ng-model="salesman.email"
+                       md-autofocus>
+            </md-input-container>
+        </form>
+
+
+        <form>
+            <md-input-container>
+                <label for="testInput">Address</label>
+                <input type="text" id="testInput3" ng-model="salesman.address"
+                       md-autofocus>
+            </md-input-container>
+        </form>
+
+
+        <form>
+            <md-input-container>
+                <label for="testInput">Phone Number</label>
+                <input type="text" id="testInput2" ng-model="salesman.number"
+                       md-autofocus>
+            </md-input-container>
+        </form>
+
+        <md-button class="md-raised md-primary" ng-click="addSalesMan()">Add SalesMan</md-button>
+
+        <md-button class="md-raised md-primary" ng-click="cancel()">Cancel</md-button>
+        <br/>
+    </md-content>
+
+</md-sidenav>
+
+
+

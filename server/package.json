@@ -10,9 +10,11 @@
   "author": "owais",
   "license": "ISC",
   "dependencies": {
+    "angularfire": "^1.2.0",
     "body-parser": "^1.14.2",
     "express": "^4.13.4",
-    "firebase": "^2.4.0",
-    "mongoose": "^4.4.3"
+    "firebase": "^2.4.2",
+    "mongoose": "^4.4.3",
+    "nodemon": "^1.9.1"
   }
 }

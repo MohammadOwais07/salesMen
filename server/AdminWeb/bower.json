@@ -1,0 +1,11 @@
+{
+  "name": "SaleManApp3",
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "angularfire": "^1.2.0"
+  }
+}

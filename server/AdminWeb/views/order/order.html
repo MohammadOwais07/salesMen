@@ -1,0 +1,88 @@
+<h1>our order page</h1>
+<md-content>
+    <md-list>
+
+        <md-list-item ng-repeat="order in orders track by $index">
+            <md-checkbox class="md-secondary">
+
+            </md-checkbox>
+
+            <!--<md-subheader class="md-no-sticky">3 line item (with hover)</md-subheader>-->
+            <!-- <md-list-item class="md-3-line" ng-repeat="order in orders track by $index">
+             </md-list-item>
+ -->
+            <!-- index repeate ni hoga -->
+            <!--ng-repeat array ha saleman k ander add krwayga-->
+            <div class="md-list-item-text">
+                <h3>{{($index +1)+") " + " " + order.name }}</h3> <!-- index show index no onlt-->
+                <h4>{{ order.product }}</h4>
+
+                <p>{{ order.address }}</p>
+
+                <p>{{ order.product }}</p>
+
+                <p>{{ order.address }}</p>
+            </div>
+        </md-list-item>
+
+        <md-divider ng-if="!last"></md-divider>
+
+    </md-list>
+
+
+    <md-content>
+
+    <span>
+            <md-content layout="column" layout-align="center end">
+
+                <md-button ng-click="openRight()"
+                           class="md-primary">
+                    Toggle right
+                </md-button>
+            </md-content>
+    </span>
+    </md-content>
+
+
+    <md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" md-is-locked-open="false">
+        <md-toolbar class="md-theme-light">
+            <h1 class="md-toolbar-tools">Oder Side</h1>
+        </md-toolbar>
+
+        <md-content layout-padding>
+
+            <form>
+                <md-input-container>
+                    <label for="testInput">Customer Name</label>
+                    <input type="text" id="testInput" ng-model="order.name"
+                           ng-model="data" md-autofocus>
+                </md-input-container>
+            </form>
+
+
+            <form>
+                <md-input-container>
+                    <label for="testInput">Product Name</label>
+                    <input type="text" id="testInput1" ng-model="order.product"
+                           ng-model="data" md-autofocus>
+                </md-input-container>
+            </form>
+
+
+            <form>
+                <md-input-container>
+                    <label for="testInput">Address</label>
+                    <input type="text" id="testInput3" ng-model="order.address"
+                           ng-model="data" md-autofocus>
+                </md-input-container>
+            </form>
+
+
+            <md-button class="md-raised md-primary" ng-click="addOrder()">Add Order</md-button>
+
+            <md-button class="md-raised md-primary" ng-click="cancel()">Cancel</md-button>
+            <br/>
+        </md-content>
+    </md-sidenav>
+
+

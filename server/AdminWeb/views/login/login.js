@@ -10,14 +10,16 @@ angular.module("myApp")
         }
 
         $scope.login = function () {
+
             $http.post('/login', $scope.user)
                 .success(function (data) {
-                    if (data.status) {  //cheak the value of data in status
-                        // $state.go()
+                    if (data.uid) {  //cheak the value of data in status
+                         $state.go('dashbord');
+                        localStorage.setItem('token',data.token);
                         console.log(data)
                     }
                     else {
-                        alert(data.message)
+                        alert(data.message);
                         console.log("SignIn" + JSON.stringify(data))
                     }
                 })
