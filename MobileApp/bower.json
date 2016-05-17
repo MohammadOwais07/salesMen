@@ -1,7 +1,22 @@
 {
   "name": "HelloIonic",
-  "private": "true",
   "devDependencies": {
     "ionic": "driftyco/ionic-bower#1.2.4"
-  }
+  },
+  "homepage": "https://github.com/MohammadOwais07/salesMen",
+  "authors": [
+    "mohammadowais <mohammadowais07@yahoo.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "www/lib",
+    "test",
+    "tests"
+  ]
 }

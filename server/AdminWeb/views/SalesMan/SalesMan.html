@@ -1,6 +1,8 @@
-<h1 xmlns="http://www.w3.org/1999/html">our saleMan </h1>
+<md-toolbar class="md-theme-indigo" style="background: lightcoral;">
+    <h1 class="md-toolbar-tools" >SALESMAN LIST </h1>
+</md-toolbar>
 
-<md-content>
+<md-content style="height: 80vh">
     <md-list>
         <!--<md-subheader class="md-no-sticky">3 line item (with hover)</md-subheader>-->
         <md-list-item class="md-3-line" ng-repeat="salesman in salesmen track by $index"> <!-- index repeate ni hoga -->
@@ -29,7 +31,7 @@
 
 <md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" md-is-locked-open="false">
     <md-toolbar class="md-theme-light">
-        <h1 class="md-toolbar-tools">Sidenav Right</h1>
+        <h1 class="md-toolbar-tools">ADD SALEMAN</h1>
     </md-toolbar>
     <md-content layout-padding>
 

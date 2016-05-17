@@ -9,7 +9,8 @@ angular.module("myApp")
             lastName: "",
             email: "",
             password: "",
-            Cpassword: ""
+            Cpassword: "",
+            isAdmin : true
 
         }
         $scope.signUp = function(){

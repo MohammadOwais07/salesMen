@@ -1,49 +1,54 @@
-<h1>our Product </h1>
+
+<md-toolbar class="md-theme-indigo" style="background: lightcoral;">
+    <h1 class="md-toolbar-tools" >PRODUCT LIST </h1>
+</md-toolbar>
+
 
 
 <md-content>
 
     <md-content layout="column" layout-align="center end">
-    <md-button ng-click="openRight()"
-               class="md-primary">
-        Toggle right
-    </md-button>
+        <md-button ng-click="openRight()"
+                   class="md-primary">
+            Toggle right
+        </md-button>
 
-</md-content>
     </md-content>
-        <md-list >
+</md-content>
+<md-list>
 
-<md-list-item class="md-3-line" ng-repeat="product in products track by $index">
-    <div class="md-list-item-text">
-        <h3>{{($index +1)+") " + " " + product.name }}</h3>
-        <h1>{{product.quantity}}</h1>
-    <h1>{{product.price}}</h1>
+    <md-list-item class="md-3-line" ng-repeat="product in products track by $index">
+        <div class="md-list-item-text">
+            <h2>{{($index +1)+") " + " " + product.name }}</h2>
+
+            <h3>{{product.quantity}}</h3>
+
+            <h3>{{product.price}}</h3>
         </div>
 
 
-
-</md-list-item>
-<md-divider ng-if="!last"></md-divider>
-        </md-list>
+    </md-list-item>
+    <md-divider ng-if="!last"></md-divider>
+</md-list>
 
 
 <md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" md-is-locked-open="false">
     <md-toolbar class="md-theme-light">
-        <h1 class="md-toolbar-tools">Sidenav Right</h1>
+        <h1 class="md-toolbar-tools">Add Product</h1>
     </md-toolbar>
     <md-content layout-padding>
 
         <form>
-            <md-input-container >
-                <label for="testInput" >Product Name</label>
+            <md-input-container>
+                <label for="testInput">Product Name</label>
                 <input type="text" id="testInput" ng-model="product.name"
                        md-autofocus>
             </md-input-container>
         </form>
 
         <form>
-            <md-input-container >
-                <label for="testInput" > Quantity </label>
+            <md-input-container>
+                <label for="testInput"> Quantity </label>
                 <input type="text" id="testInput1" ng-model="product.quantity"
                        md-autofocus>
             </md-input-container>
@@ -51,13 +56,12 @@
 
 
         <form>
-            <md-input-container  >
-                <label for="testInput" >Price</label>
+            <md-input-container>
+                <label for="testInput">Price</label>
                 <input type="text" id="testInput3" ng-model="product.price"
                        md-autofocus>
             </md-input-container>
         </form>
-
 
 
         <md-button class="md-raised md-primary" ng-click="addProduct()">Add Product</md-button>

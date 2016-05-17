@@ -1,0 +1,20 @@
+<div class="bar bar-header bar-positive">
+  <h1 class="title">CustomerList</h1>
+</div>
+<br/>
+<br/>
+<ion-scroll zooming="true" direction="xy" style="width: 1250px; height: 1100px">
+<ion-list>
+  <ion-item ng-repeat="customer in customers">
+    <div class="md-list-item-text"  ng-if="!last">
+      <h3>{{($index +1)+") " + " " + customer.name }}</h3>
+      <p>{{customer.product}}</p>
+      <p>{{customer.quantity}}</p> 
+
+
+    </div>
+
+
+  </ion-item>
+</ion-list>
+  </ion-scroll>

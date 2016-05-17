@@ -1,27 +1,21 @@
-<h1>our order page</h1>
-<md-content>
+<md-toolbar class="md-theme-indigo" style="background: lightcoral;">
+    <h1 class="md-toolbar-tools">ORDER LIST </h1>
+</md-toolbar>
+<md-content style="height: 80vh">
     <md-list>
-
         <md-list-item ng-repeat="order in orders track by $index">
             <md-checkbox class="md-secondary">
-
             </md-checkbox>
-
-            <!--<md-subheader class="md-no-sticky">3 line item (with hover)</md-subheader>-->
-            <!-- <md-list-item class="md-3-line" ng-repeat="order in orders track by $index">
-             </md-list-item>
- -->
-            <!-- index repeate ni hoga -->
-            <!--ng-repeat array ha saleman k ander add krwayga-->
-            <div class="md-list-item-text">
+            <div class="md-list-item-text"> <!-- index repeate ni hoga -->
+                <!--ng-repeat array ha saleman k ander add krwayga-->
                 <h3>{{($index +1)+") " + " " + order.name }}</h3> <!-- index show index no onlt-->
-                <h4>{{ order.product }}</h4>
-
-                <p>{{ order.address }}</p>
-
                 <p>{{ order.product }}</p>
 
                 <p>{{ order.address }}</p>
+
+
+
+
             </div>
         </md-list-item>
 
